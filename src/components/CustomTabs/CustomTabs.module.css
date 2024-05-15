@@ -1,0 +1,18 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* margin: 0 auto; */
+}
+.heading {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.content {
+  background-color: #fff;
+  padding: 20px 10px;
+  height: 300px;
+  overflow: auto;
+}

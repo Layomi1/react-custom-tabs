@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import CustomTabs from "./components/CustomTabs/CustomTabs";
+import RandomComponent from "./components/RandomComponent";
 
 function App() {
+  const tabs = [
+    {
+      label: "Tab 1",
+      content: <div>This is content for Tab 1</div>,
+    },
+    {
+      label: "Tab 2",
+      content: <div>This is content for Tab 2</div>,
+    },
+    {
+      label: "Tab 3",
+      content: <RandomComponent />,
+    },
+  ];
+
+  function handleChange(currentTabIndex) {
+    console.log(currentTabIndex);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CustomTabs tabsContent={tabs} onChange={handleChange} />
     </div>
   );
 }
