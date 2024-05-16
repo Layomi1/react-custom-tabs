@@ -6,6 +6,7 @@ function App() {
   const tabs = [
     {
       label: "Tab 1",
+      content: <div>This is Tab 1</div>,
     },
     {
       label: "Tab 2",
